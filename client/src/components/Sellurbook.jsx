@@ -1,6 +1,22 @@
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 import * as React from 'react';
+import { useEffect, useState } from 'react';
+import '../index.css';
  function Sellurbook()
  {
+  const [book, setbook] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/getuploadbook")
+      .then((res) => res.json())
+      .then((data) => {
+        setbook(data);
+      });
+    console.log(book);
+  }, []);
   function submithandler(e)
   {
   e.preventDefault();
@@ -23,19 +39,37 @@ import * as React from 'react';
 return (
     <>
     <div className='mt-40'>
+    <h2 className='text-2xl font-bold  text-center text-amber-800'>Enter Your Book Details:</h2>
     <form action="" onSubmit={submithandler} name='form' className='flex gap-10 flex-col' >
-    <div className='flex gap-4 justify-around items-center '>
+    <div className='flex gap-4 justify-around items-center max-md:flex-col'>
+    <label htmlFor="Title">
+    <div className=" font-bold py-2"> Enter your Title:</div>
     <input type="text" required placeholder='Enter a title' name='title' className='border-2 border-solid border-slate-400  outline-none text-black bg-white px-4 rounded-md p-1'/>
+    </label>
+    <label htmlFor="author">
+    <div className=" font-bold py-2"> Enter Author Name:</div>
     <input type="text" required placeholder='Enter an author Name'name='author' className='border-2 border-solid border-slate-400 outline-none text-black bg-white px-4 rounded-md py-1'/>
+    </label>
     </div>
-    <div className='flex gap-4 justify-around  items-center'>
+    <div className='flex gap-4 justify-around  items-center max-md:flex-col'>
+    <label htmlFor="Pdfurl">
+    <div className=" font-bold py-2">  Enter PDF URL:</div>
+  
     <input type="text" required placeholder='Enter a pdf url' name='pdfurl' className='border-2 border-solid border-slate-400 outline-none text-black bg-white px-4 py-1 rounded-md'/>
-   
+    </label>
+       <label htmlFor="Image url">
+       <div className=" font-bold py-2">  Enter Image URL:</div>
       <input required type="text" placeholder='Enter an image url'name='imageurl' className='border-2 border-solid border-slate-400 outline-none text-black bg-white px-4 rounded-md py-1'/>
+      </label>
     </div>
-    <div className='flex gap-4 justify-around items-center'>
+    <div className='flex gap-4 justify-around items-center max-md:flex-col'>
+     <div >  
+     <div className=" font-bold py-2">Enter a Description:</div>
      <input type="text" required placeholder='Enter Description' name='description' className='border-2 border-solid border-slate-400 outline-none text-black bg-white px-4 py-1 rounded-md'/>
-     <select name="genre" id="" className='outline-none border-2 border-solid border-slate-400 rounded-md px-14 py-1 text-black bg-white' placeholder="Choose a Category">
+     </div>
+       <div>
+        <div className=" font-bold py-2">Enter a Genre:</div>
+        <select name="genre" id="" className='outline-none border-2 border-solid border-slate-400 rounded-md px-12 py-1 text-black bg-white' placeholder="Choose a Category">
       <option value="Select Genre">Select a  Genre</option>
       <option value="Fiction">Fiction</option>
       <option value="Non-Fiction">Non-Fiction</option>
@@ -52,19 +86,43 @@ return (
       <option value="Education">Education</option>
       <option value="Travel">Travel</option>
      </select>
+       </div>
+    
     </div>
        
     <div className='flex justify-center items-center'>
     <input type="submit" className='  text-white flex bg-orange-500 px-3 py-1 rounded-md'></input> 
      </div>
     </form>
-     
-      </div>
-    <h2 className=' flex justify-center text-2xl mt-20 px-10'>Some Popular Books</h2>
+ </div>
    <div className='flex flex-wrap gap-6 px-10'>
-   <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequuntur pariatur, maxime commodi ullam repellat veniam beatae vitae nemo et illum ut nostrum quisquam tempora architecto necessitatibus. Itaque, natus ipsum!</h2>
-    <div> 
+      <div>
+      <h2 className="my-20 text-3xl font-bold text-center">Book On Sells</h2>
+      <div className="flex flex-wrap gap-4 justify-center items-center">
+      {book.map((b, index) => (
+        <div key={index}>
+          <Card sx={{ maxWidth: 345 }}>
+          <div className="flex justify-center">
+          <img src={b.imageurl} alt="" className="h-[220px] w-[180px] text-center flex justify-center"/>
+          </div>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {b.title}
+              </Typography>
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+               {b.description}
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small" sx={{backgroundColor:'blue', color:'#fff', borderRadius:"10px", padding:'5px'}} >Buy Now</Button>
+              <Button size="small" >Learn More</Button>
+            </CardActions>
+          </Card>
+        </div>
+      ))}
       </div>
+     
+    </div>
       
   </div>
     </>

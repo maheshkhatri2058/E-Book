@@ -17,7 +17,7 @@ const Blog = () => {
   }, []);
   return (
     <div>
-      <h2 className="my-20">Blogs</h2>
+      <h2 className="my-20 text-3xl font-bold text-center">Book On Sells</h2>
       <div className="flex flex-wrap gap-4 justify-center items-center">
       {book.map((b, index) => (
         <div key={index}>
@@ -34,8 +34,8 @@ const Blog = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Buy Now</Button>
-              <Button size="small">Learn More</Button>
+              <Button size="small" >Buy Now</Button>
+              <Button size="small" sx={{backgroundColor:'blue', color:'#fff', borderRadius:"10px", padding:'5px'}}>Learn More</Button>
             </CardActions>
           </Card>
         </div>

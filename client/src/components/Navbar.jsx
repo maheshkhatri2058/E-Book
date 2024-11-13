@@ -15,7 +15,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Shop','Sell Your Books' ,'Blogs'];
+const navItems = ['Home', 'About', 'Shop','Sell Your Books' ,'Book On Sell'];
 const link=['/','/about','/shop','/sellyourbook','/blogs']
 
 function Navbar(props) {
