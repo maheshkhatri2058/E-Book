@@ -1,0 +1,88 @@
+[
+  {
+  
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "genre": "Classic Fiction",
+  "imageurl": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982146702/the-great-gatsby-9781982146702_xlg.jpg",
+  "description": "A story of the mysteriously wealthy Jay Gatsby and his love for Daisy Buchanan, set in the Jazz Age.",
+  "bookpdf": "https://example.com/greatgatsby.pdf"
+},
+{
+
+  "title": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "genre": "Classic Fiction",
+  "imageurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_(first_edition_cover).jpg/440px-To_Kill_a_Mockingbird_(first_edition_cover).jpg",
+  "description": "A young girl grows up in the racially charged South, with her father defending a black man accused rap.",
+  "bookpdf": "https://example.com/tokillamockingbird.pdf"
+
+},
+{
+  "title": "1984",
+  "author": "George Orwell",
+  "genre": "Dystopian Fiction",
+  "imageurl": "https://litstack.com/wp-content/uploads/2013/06/1984_poster.jpg",
+  "description": "A dystopian novel about a totalitarian regime that employs surveillance and control over its citizens.",
+  "bookpdf": "https://example.com/1984.pdf"
+},
+{
+  "title": "Pride and Prejudice",
+  "author": "Jane Austen",
+  "genre": "Romantic Fiction",
+  "imageurl": "https://flxt.tmsimg.com/assets/p16161151_b_v10_aa.jpg",
+  "description": "A story of manners and marriage among the British gentry, focusing on Elizabeth Bennet and Mr. Darcy.",
+  "bookpdf": "https://example.com/prideandprejudice.pdf"
+ 
+},
+{
+  "title": "The Catcher in the Rye",
+  "author": "J.D. Salinger",
+  "genre": "Fiction",
+  "imageurl": "https://blog.12min.com/wp-content/uploads/2018/06/image2-16.jpg",
+  "description": "The story of a young man Holden Caulfield, who leaves his school and ventures into New York City.",
+  "bookpdf": "https://example.com/catcherintherye.pdf"
+ 
+},
+{
+  "title": "The Hobbit",
+  "author": "J.R.R. Tolkien",
+  "genre": "Fantasy",
+  "imageurl": "https://image.tmdb.org/t/p/original/xQYiXsheRCDBA39DOrmaw1aSpbk.jpg",
+  "description": "Bilbo Baggins embarks on a journey with dwarves to reclaim their mountain home from the dragon Smaug.",
+  "bookpdf": "https://example.com/thehobbit.pdf"
+  
+},
+{
+  "title": "Moby Dick",
+  "author": "Herman Melville",
+  "genre": "Adventure",
+  "imageurl": "https://m.media-amazon.com/images/M/MV5BYzg0MjFmMjAtMmNlMC00ZmEzLWE0ZDQtYTFhZjAyNzIxZWU3XkEyXkFqcGdeQXVyMjQwMjk0NjI@._V1_FMjpg_UX1000_.jpg",
+  "description": "Captain Ahab’s obsessive quest to seek revenge on the white whale, Moby Dick.",
+  "bookpdf": "https://example.com/mobydick.pdf"
+},
+{
+  "title": "War and Peace",
+  "author": "Leo Tolstoy",
+  "genre": "Historical Fiction",
+  "imageurl": "https://www.tvguide.com/a/img/catalog/provider/1/1/1-6240592633.jpg",
+  "description": "An epic novel that chronicles the French invasion of Russia and its impact on Tsarist society.",
+  "bookpdf": "https://example.com/warandpeace.pdf"
+},
+{
+  "title": "The Alchemist",
+  "author": "Paulo Coelho",
+  "genre": "Adventure, Inspirational",
+  "imageurl": "https://i.harperapps.com/hcanz/covers/9780063055339/y648.jpg",
+  "description": "A young shepherd dreams of finding treasure in Egypt, embarking on a life-changing journey.",
+  "bookpdf": "https://example.com/thealchemist.pdf"
+ 
+},
+{
+  "title": "Adventures of SherlockHolmes",
+  "author": "Arthur Conan Doyle",
+  "genre": "Mystery",
+  "imageurl": "https://almabooks.com/wp-content/uploads/2016/10/adventures-of-Sherlock-Holmes.jpg",
+  "description": "A collection of twelve short stories featuring the legendary detective Holmes.",
+  "bookpdf": "https://example.com/sherlockholmes.pdf"
+}]
