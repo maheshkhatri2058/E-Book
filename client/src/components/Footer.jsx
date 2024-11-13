@@ -5,8 +5,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div>
-    <footer className="bg-green-100 text-center px-10">
+    <div className='bottom-0 left-0 right-0'>
+    <footer className="bg-green-100 text-center px-10 block ">
       <div className="container p-4">
         <section className="mb-4">
          <aside>
