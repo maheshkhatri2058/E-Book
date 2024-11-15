@@ -31,8 +31,9 @@ app.get('/getuploadbook', async(req, res) => {
   const info = await uploads.find();
   res.send(info);
 });
-app.delete('/delete', async(req, res) => {
- let result=await books.deleteOne({title:"The Great Gatsby"});
+app.delete('/delete/:id', async(req, res) => {
+  const id=req.params.id;
+ let result=await uploads.deleteOne({title:id});
  res.send(result);
 })
 app.get('/searchbook/:id', async(req, res)=>

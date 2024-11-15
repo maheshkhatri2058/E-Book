@@ -35,6 +35,13 @@ import '../index.css';
     body:JSON.stringify(myobj)  //converting object to string before sending it to server
   }).then(res=>res.json()).then(data=>alert('Success'));
 }
+function deleteapi(id)
+{
+  fetch(`http://localhost:5000/delete/${id}`, {
+    method: 'DELETE'})
+    setbook(book.filter((book) => book._id !== id));
+  alert(id);
+}
 
 return (
     <>
@@ -116,6 +123,10 @@ return (
             <CardActions>
               <Button size="small" sx={{backgroundColor:'blue', color:'#fff', borderRadius:"10px", padding:'5px'}} >Buy Now</Button>
               <Button size="small" >Learn More</Button>
+              <Button
+               size="small" sx={{bgcolor:"red", color:'#fff', }} 
+               onClick={()=>deleteapi(b._id)}>Delete</Button>
+
             </CardActions>
           </Card>
         </div>
